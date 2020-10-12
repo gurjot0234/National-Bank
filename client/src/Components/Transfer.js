@@ -41,7 +41,12 @@ class Transfer extends Component {
     var datepicker = document.querySelectorAll(".datepicker");
     M.Datepicker.init(datepicker, {
       onSelect: data => {
-       
+    console.log(data)
+    const newDate = moment(data).format("DD/MM/YYYY");
+     this.setState({
+       ...this.state,
+       dateOfTransfer:newDate
+     })
       },
       autoClose: true,
       cancel: ""
@@ -132,7 +137,7 @@ class Transfer extends Component {
       });
       return false;
     } else if (
-      this.state.transferType === "automatic" &&
+      this.state.transferType === "Automatic" &&
       this.state.dateOfTransfer.length === 0
     ) {
       this.setState({
@@ -164,7 +169,7 @@ class Transfer extends Component {
   };
   render() {
     var dataField =
-      this.state.transferType === "automatic" ? (
+      this.state.transferType === "Automatic" ? (
         <div className="row">
           <div className="col s6 input-field">
             <input id="transactionDate" type="text" className="datepicker" />
