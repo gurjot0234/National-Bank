@@ -56,7 +56,6 @@ class Dashboard extends Component {
         <tr key={index}>
           <td>{row.type}</td>
           <td>{row.toAccount}</td>
-          <td>{row.toUser}</td>
           <td>{row.amount}</td>
           <td>{row.transactionDate}</td>
         </tr>
@@ -78,7 +77,6 @@ class Dashboard extends Component {
                 <tr>
                   <th>Transaction Type</th>
                   <th>To Account</th>
-                  <th>To</th>
                   <th>Amount</th>
                   <th>Transaction Date</th>
                 </tr>
