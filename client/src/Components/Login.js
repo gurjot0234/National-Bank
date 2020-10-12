@@ -48,7 +48,7 @@ class Login extends Component {
               <input
                 placeholder="password"
                 name="password"
-                type="text"
+                type="password"
                 onChange={e => this.onChangeLoginInput(e)}
               />
               <label htmlFor="password">Password</label>
